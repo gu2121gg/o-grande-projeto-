@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel De Inscrição</title>
+  <link rel="stylesheet" href="style2.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+  <!-- Vídeo de fundo -->
+  <video id="background-video" autoplay muted loop>
+    <source src="car.mp4" type="video/mp4">
+    Seu navegador não suporta o vídeo.
+  </video>
+
+  <!-- Caixa de inscrição -->
+  <div class="signup-box">
+    <div class="login-header">
+      <header>Inscreva-se</header>
+    </div>
+    <form onsubmit="signUp(); return false;">
+      <div class="input-box">
+        <input type="email" id="signup-email" class="input-field" placeholder="Email" required>
+        <input type="password" id="signup-password" class="input-field" placeholder="Senha" required>
+      </div>
+      <div class="input-submit">
+        <button type="submit" class="submit-btn">
+          <label class="submit-btn">Inscrever-se</label>
+        </button>
+      </div>
+    </form>
+    <div class="sign-up-link">
+      <a href="index.html">Já tem uma conta? Entrar</a>
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
+
+  

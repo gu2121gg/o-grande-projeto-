@@ -1,0 +1,227 @@
+/* Estilos gerais da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #dfdfdf;
+    overflow: hidden;
+    flex-direction: column; /* Organizar os elementos na vertical */
+}
+
+/* Vídeo de fundo */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estilos da caixa de login */
+.login-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Cabeçalho do login */
+.login-header {
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.login-header header {
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Estilos dos campos de entrada */
+.input-box .input-field {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: .3s;
+}
+
+::placeholder {
+    font-weight: 500;
+    color: #222;
+}
+
+.input-field:focus {
+    width: 105%;
+    border: 2px solid #4CAF50;
+}
+
+/* Estilo da seção de "Lembrar-me" e "Esqueceu a senha?" */
+.forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+#check {
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4CAF50;
+}
+
+section a {
+    color: #555;
+}
+
+/* Estilo do botão de login */
+.input-submit {
+    position: relative;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 60px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.input-submit label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Estilos para link de "Criar conta" */
+.sign-up-link {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.sign-up-link a {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.sign-up-link a:hover {
+    color: #333;
+}
+
+/* Estilos do botão de tocar música */
+.music-btn-container {
+    position: absolute;
+    bottom: 30px; /* Coloca o botão na parte inferior da tela */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.music-btn {
+    width: 250px;  /* Diminuir o tamanho do botão */
+    height: 50px;  /* Diminuir a altura */
+    background: #b11d1d;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 16px;  /* Font-size reduzido */
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.music-icon {
+    margin-right: 10px;
+    font-size: 20px;  /* Ajuste no tamanho do ícone */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .login-box {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .login-header header {
+        font-size: 24px;
+    }
+
+    .input-field {
+        font-size: 15px;
+        height: 50px;
+    }
+
+    .submit-btn {
+        height: 50px;
+    }
+
+    .sign-up-link {
+        font-size: 14px;
+    }
+
+    .music-btn {
+        padding: 10px 20px;
+        font-size: 15px;  /* Font-size reduzido */
+    }
+
+    .music-icon {
+        font-size: 18px;  /* Tamanho do ícone ajustado */
+    }
+}

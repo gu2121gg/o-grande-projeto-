@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Chave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #dfdfdf;
+            overflow: hidden;
+        }
+
+        /* Vídeo de fundo */
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Estilos da caixa de Esqueceu a Senha */
+        .forgot-password-box {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 440px;
+            height: 380px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin: 20px 0 40px 0;
+        }
+
+        .login-header header {
+            color: #333;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .input-box .input-field {
+            width: 100%;
+            height: 60px;
+            font-size: 17px;
+            padding: 0 25px;
+            margin-bottom: 15px;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+            outline: none;
+            transition: .3s;
+        }
+
+        ::placeholder {
+            font-weight: 500;
+            color: #222;
+        }
+
+        .input-field:focus {
+            width: 105%;
+        }
+
+        .input-submit {
+            position: relative;
+        }
+
+        .submit-btn {
+            width: 100%;
+            height: 60px;
+            background: #222;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .input-submit label {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            color: #fff;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #000;
+            transform: scale(1.05, 1);
+        }
+
+        .back-to-login-link {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        .back-to-login-link a {
+            color: #000;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <video id="background-video" autoplay loop muted>
+        <source src="car.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <div class="forgot-password-box">
+        <div class="login-header">
+            <header>Gerador de Chave</header>
+        </div>
+        <div class="input-box">
+            <div class="input-field">
+                <label for="chave">Chave Gerada</label>
+                <input type="text" id="chave" readonly>
+            </div>
+        </div>
+        <div class="input-submit">
+            <button class="submit-btn" onclick="gerarChave()">Gerar Chave</button>
+        </div>
+        <div class="back-to-login-link">
+            <a href="#">Voltar para a página inicial</a>
+        </div>
+    </div>
+
+    <script>
+        function gerarChave() {
+            const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let chave = '';
+            for (let i = 0; i < 20; i++) {
+                chave += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+            }
+            document.getElementById('chave').value = chave;
+        }
+    </script>
+
+</body>
+</html>
