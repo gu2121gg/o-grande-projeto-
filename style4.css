@@ -30,11 +30,12 @@ header {
     background-color: transparent;
     filter: drop-shadow(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Separa logo e navegação */
     align-items: center;
     z-index: 100;
 }
 
+/* Logo */
 .logo {
     font-size: 3rem;
     color: #b74b4b;
@@ -48,10 +49,17 @@ header {
 }
 
 /* Navegação */
+nav {
+    display: flex;
+    justify-content: center; /* Centraliza os links de navegação */
+    align-items: center;
+    width: 100%; /* Garante que a navegação ocupe toda a largura */
+}
+
 nav a {
     font-size: 1.8rem;
     color: white;
-    margin-left: 4rem;
+    margin-left: 4rem; /* Ajuste o espaço entre os itens de navegação */
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
@@ -63,79 +71,31 @@ nav a.active {
     border-bottom: 3px solid #b74b4b;
 }
 
-/* Seções */
-section {
-    min-height: 100vh;
-    padding: 5rem 9% 5rem;
+/* Caixa Centralizada */
+.caixa {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para garantir que a caixa fique perfeitamente centralizada */
+    width: 60%; /* Largura da caixa */
+    max-width: 500px; /* Largura máxima */
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }
 
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    background-color: black;
-}
-
-.home .home-content h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-span {
-    color: #b74b4b;
-}
-
-.home-content h3 {
-    font-size: 4rem;
+.caixa h2 {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.home-content p {
-    font-size: 1.6rem;
-}
-
-.home-img {
-    border-radius: 50%;
-}
-
-.home-img img {
-    position: relative;
-    width: 32vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.home-img img:hover {
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-/* Botões sociais */
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent;
-    border: 0.2rem solid #b74b4b;
-    font-size: 2rem;
-    border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease;
     color: #b74b4b;
 }
 
-.social-icons a:hover {
-    color: black;
-    transform: scale(1.3) translateY(-5px);
-    background-color: #b74b4b;
-    box-shadow: 0 0 25px #b74b4b;
+.caixa p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
 }
 
 /* Botão */
@@ -212,13 +172,14 @@ span {
     }
 }
 
+/* Media Queries */
 @media (max-width: 1000px) {
     .home {
         gap: 4rem;
     }
 }
 
-@media(max-width:995px){
+@media(max-width: 995px) {
     .home {
         flex-direction: column;
         margin: 5rem 4rem;
