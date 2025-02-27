@@ -1,0 +1,233 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo do header */
+header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 0.5s ease-in-out, changeColor 3s linear infinite; /* Aplica as animações */
+}
+
+/* Animação do movimento de deslizamento do header */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animação RGB no fundo do header */
+@keyframes changeColor {
+    0% {
+        background-color: rgba(53, 53, 53, 0.411); /* Vermelho */
+    }
+    15% {
+        background-color: rgba(64, 65, 64, 0.411); /* Verde */
+    }
+    30% {
+        background-color: rgba(68, 68, 68, 0.411); /* Azul */
+    }
+    40% {
+        background-color: rgba(70, 68, 68, 0.411); /* Retorna ao Vermelho */
+    }
+    50% {
+        background-color: rgba(75, 75, 75, 0.411); /* Vermelho */
+    }
+    63% {
+        background-color: rgba(68, 68, 68, 0.411); /* Verde */
+    }
+    76% {
+        background-color: rgba(51, 51, 51, 0.411); /* Azul */
+    }
+    100% {
+        background-color: rgba(37, 37, 37, 0.411); /* Retorna ao Vermelho */
+    }
+}
+
+
+header .logo h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Animação para o cabeçalho */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo do menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Seção de conteúdo */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInSection 1s forwards;
+    margin-bottom: 20px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.1);
+}
+
+/* Animação para a seção */
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo da seção de Jogos */
+#jogos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem na próxima linha quando necessário */
+    justify-content: space-evenly; /* Distribui igualmente os itens na linha */
+    padding: 40px 20px;
+}
+
+/* Estilo de cada item de jogo */
+.game {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px; /* Define uma largura fixa para cada jogo */
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+}
+
+/* Efeito de hover para aumentar o tamanho do jogo */
+.game:hover {
+    transform: scale(1.05);
+}
+
+/* Imagem do jogo */
+.game img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Estilo do link de download */
+.download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no link de download */
+.download-link:hover {
+    background-color: #f39c12;
+}
+
+
+
+/* Estilo do footer */
+footer {
+    background-color: #333;
+    color: rgb(0, 183, 255);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Animação para os links */
+nav ul li a {
+    opacity: 0;
+    animation: fadeInLinks 1.5s ease-in-out forwards;
+}
+
+nav ul li:nth-child(1) a {
+    animation-delay: 0.3s;
+}
+nav ul li:nth-child(2) a {
+    animation-delay: 0.6s;
+}
+nav ul li:nth-child(3) a {
+    animation-delay: 0.9s;
+}
+nav ul li:nth-child(4) a {
+    animation-delay: 1.2s;
+}
+
+/* Animação de fade-in dos links */
+@keyframes fadeInLinks {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
